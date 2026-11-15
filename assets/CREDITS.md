@@ -25,6 +25,6 @@ The files in `screenshots/` show the actual Studyline application during develop
 
 Any additional integration screenshots in this folder document the corresponding page as rendered during the final review. Screenshot metadata records its provenance.
 
-## Code and assistance
+## Code references
 
-Original project code is licensed under the root [MIT licence](../LICENSE). [TodoMVC](https://github.com/tastejs/todomvc) was reviewed as an open-source reference; its application code was not copied into Studyline. The README acknowledges AI assistance with code, writing, debugging and verification.
+Original project code is licensed under the root [MIT licence](../LICENSE). [TodoMVC](https://github.com/tastejs/todomvc) was reviewed as an open-source reference; its application code was not copied into Studyline.

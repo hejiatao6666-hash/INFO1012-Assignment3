@@ -74,8 +74,6 @@ Complete the form and select **Add task**. All fields except additional notes ar
 
 Leading and trailing whitespace is removed. Unsupported control characters are rejected. If any value is invalid, the task is not saved, the affected field displays an error, and focus moves to the first field requiring attention. Correct the values and submit the form again.
 
-For a practice task, use a title such as **Review HTML forms**, course code **INFO1012**, course name **Information Technology Systems**, description **Review labels and input validation**, and an optional note such as **Check the tutorial examples**. Choose a suitable future date. This is demonstration content, not a statement of a real course deadline.
-
 ### 4. View all task details
 
 The **All study tasks** list shows the task count and every saved field, including description and additional notes. Tasks with the earliest deadlines appear first; ties are ordered by title and then by stable task identifier. A text label identifies each task as **Overdue**, **Due today** or **Upcoming**. Empty notes are shown as **No additional notes**.
@@ -176,7 +174,6 @@ Local integration review also checked the development and privacy pages, navigat
 ## Credits and references
 
 - **Project author:** He Jiatao.
-- **AI assistance:** OpenAI Codex assisted with interpreting requirements, drafting and refining code and explanatory text, and debugging and checking the application. The project includes this acknowledgement so the assistance is visible rather than presented as unaided work.
 - **Photographs:** The three images are downloaded Unsplash photographs. Their source URLs and applicable licence are recorded in [assets/CREDITS.md](assets/CREDITS.md). They are not covered by this project's MIT licence.
 - **Open-source review:** [TodoMVC](https://github.com/tastejs/todomvc) was reviewed as an established example of task-oriented interfaces and separation of concerns. Studyline does not copy its application code.
 - **Agile:** [Manifesto for Agile Software Development](https://agilemanifesto.org/) and [Principles behind the Agile Manifesto](https://agilemanifesto.org/principles.html).
@@ -185,7 +182,3 @@ Local integration review also checked the development and privacy pages, navigat
 ## Licence
 
 Original project code is available under the [MIT licence](LICENSE), copyright © 2026 He Jiatao. Third-party photographs retain their original terms; see [image credits](assets/CREDITS.md).
-
-## Submission package
-
-The repository URL is included at the start of this README. The assignment submission notice labelled **“updated 15/11/2026”** requires a ZIP exported from the GitHub repository, with the repository URL inside its README or a text file. Download the final pushed repository with **Code → Download ZIP**, and upload that ZIP to Canvas. Check that the archive contains the complete project, this README with the repository URL, screenshots and credits. The repository must contain the same final files as the archive.

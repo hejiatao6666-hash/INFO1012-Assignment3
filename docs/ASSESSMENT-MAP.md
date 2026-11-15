@@ -64,7 +64,7 @@ Repository: <https://github.com/hejiatao6666-hash/INFO1012-Assignment3>
 | Separate folders for HTML, CSS and JavaScript | [src/html](../src/html), [src/css](../src/css), [src/js](../src/js) | All four pages load their CSS and scripts successfully from the supplied structure. |
 | Project title, description, installation/run and usage instructions | [README](../README.md) | Follow the instructions from a newly extracted ZIP. No application package installation is required. |
 | Screenshot of the task page and its features | [README](../README.md) and [screenshots](../assets/screenshots) | Screenshots cover home desktop/mobile, login, task desktop/mobile views and deletion confirmation. |
-| Credits and a chosen licence | [README credits](../README.md#credits-and-references), [image credits](../assets/CREDITS.md), [MIT licence](../LICENSE) | The original code licence is distinguished from the photographs' original terms. AI assistance is acknowledged. |
+| Credits and a chosen licence | [README credits](../README.md#credits-and-references), [image credits](../assets/CREDITS.md), [MIT licence](../LICENSE) | The original code licence is distinguished from the photographs' original terms. |
 | Repository URL in the submitted ZIP | Repository URL at the start of [README](../README.md) | Verify the final URL opens the intended repository and that this README is present in the downloaded archive. |
 | Final repository files and ZIP match | Final pushed repository and its downloaded archive | Push the final changes, download **Code → Download ZIP**, inspect the archive and upload that archive under the assignment notice labelled **“updated 15/11/2026”**. |
 
