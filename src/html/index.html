@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Studyline is He Jiatao's study task manager for organising coursework, deadlines and study notes.">
+  <title>Studyline — Study task manager</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/common.js" defer></script>
+  <script src="../js/home.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Studyline home">Studyline<span aria-hidden="true">.</span></a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="tasks.html">My tasks</a>
+        <a href="blog.html">Development</a>
+        <a href="ethics.html">Ethics &amp; privacy</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main-content">
+    <section class="container home-intro" aria-labelledby="app-title">
+      <div class="intro-copy">
+        <h1 id="app-title">Studyline</h1>
+        <p class="intro-statement">A clearer plan for your next study session.</p>
+        <p>Keep your coursework, deadlines and study notes in one place. Make a task, give it a date, and come back with a clear next step.</p>
+        <a class="button" href="tasks.html">Open my tasks <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <p class="small-copy">Built by He Jiatao for Information Technology Systems.</p>
+      </div>
+      <div class="study-gallery" role="region" aria-label="Study inspiration gallery">
+        <figure class="featured-image">
+          <img id="gallery-image" src="../../assets/images/study-desk.jpg" alt="A person writing study notes beside a laptop and a cup" width="1200" height="800">
+          <figcaption><span id="gallery-caption">Make a little space to focus.</span><span id="gallery-count" aria-live="polite">1 / 3</span></figcaption>
+        </figure>
+        <div class="gallery-controls">
+          <div class="gallery-thumbnails" aria-label="Choose a study image">
+            <button class="thumbnail" type="button" data-image="0" aria-label="Show study desk image" aria-pressed="true"><img src="../../assets/images/study-desk.jpg" alt="Study desk" width="120" height="80"></button>
+            <button class="thumbnail" type="button" data-image="1" aria-label="Show writing image" aria-pressed="false"><img src="../../assets/images/writing.jpg" alt="Fountain pen writing on paper" width="120" height="80"></button>
+            <button class="thumbnail" type="button" data-image="2" aria-label="Show books image" aria-pressed="false"><img src="../../assets/images/books.jpg" alt="A stack of colourful study books" width="120" height="80"></button>
+          </div>
+          <button id="next-image" type="button" class="text-button">Next image <span aria-hidden="true">→</span></button>
+        </div>
+      </div>
+    </section>
+    <section class="about-app" aria-labelledby="about-app-title">
+      <div class="container split-section">
+        <div><h2 id="about-app-title">About the app</h2><p class="section-lead">Small tasks. Clear deadlines. One place to keep track.</p></div>
+        <div class="section-content">
+          <p>Managing several courses can make a simple to-do list hard to follow. Studyline connects each task to its course, due date, description and notes, so the information needed to start is kept together.</p>
+          <ul class="feature-list">
+            <li><strong>Capture the whole task.</strong> Record what needs doing, which course it belongs to and when it is due.</li>
+            <li><strong>Keep the plan accurate.</strong> Edit any detail when requirements change, or remove a task after confirming the deletion.</li>
+            <li><strong>See what is next.</strong> All tasks appear in due-date order, with overdue tasks clearly labelled.</li>
+            <li><strong>Return to your work.</strong> Tasks stay in the same browser after refreshing. The demonstration login gates the task interface.</li>
+          </ul>
+          <p class="small-copy">This is a browser-based coursework prototype. Read <a href="ethics.html">Ethics &amp; privacy</a> before storing personal information.</p>
+        </div>
+      </div>
+    </section>
+    <section class="container split-section about-me" aria-labelledby="about-me-title">
+      <div><h2 id="about-me-title">About me</h2><p class="section-lead">Hello, I’m He Jiatao.</p><p>I am a second-year Computer Science and Technology student taking <strong>Information Technology Systems (INFO1012)</strong>.</p><p>I enjoy learning how computers work and exploring ways to use code to communicate information. Outside study, I enjoy running and table tennis.</p></div>
+      <div class="section-content routine">
+        <h3>The study routine I am adopting</h3>
+        <p>I want a plan that is specific enough to act on and flexible enough to update. This is how I plan to use Studyline:</p>
+        <ol>
+          <li><strong>Plan the week on Sunday.</strong> Spend 20 minutes checking assignments, quizzes and deadlines across my courses.</li>
+          <li><strong>Break large assignments down.</strong> Create separate tasks for reading the brief, building, testing and checking the submission.</li>
+          <li><strong>Choose three priorities each day.</strong> Consider both the deadline and the amount of work involved.</li>
+          <li><strong>Work in focused blocks.</strong> Study for about 45 minutes, take a 10-minute break, and spend five minutes updating the plan in the evening.</li>
+          <li><strong>Leave time to check.</strong> Aim to finish a first version two days before the deadline so there is time for testing and revision.</li>
+        </ol>
+      </div>
+    </section>
+    <div class="container home-close"><p>A plan is useful when it is easy to return to.</p><a href="tasks.html">Start with one task <span aria-hidden="true">→</span></a></div>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><p>Studyline · He Jiatao · INFO1012</p><p>Current date &amp; time: <time data-clock>Loading local time…</time></p></div></footer>
+</body>
+</html>

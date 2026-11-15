@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How Studyline applies responsible data use, privacy and honest access limitations.">
+  <title>Ethics &amp; privacy — Studyline</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/common.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header"><div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="Studyline home">Studyline<span aria-hidden="true">.</span></a>
+    <nav class="site-nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="tasks.html">My tasks</a><a href="blog.html">Development</a><a href="ethics.html" aria-current="page">Ethics &amp; privacy</a></nav>
+  </div></header>
+  <main id="main-content" class="container">
+    <div class="page-heading"><div><h1>Ethics &amp; privacy</h1><p>Useful study tools should explain what happens to your information.</p></div></div>
+    <div class="article-shell"><nav class="article-nav" aria-label="On this page"><a href="#ethical-use">Ethical data use</a><a href="#privacy-limits">Privacy &amp; limits</a><a href="#implementation">Implementation</a><a href="#ethics-references-heading">References</a></nav><div class="article-body">
+<section id="ethical-use" class="article-section" aria-labelledby="ethical-use-heading">
+  <h2 id="ethical-use-heading">Ethical data use starts with a clear purpose</h2>
+  <p>Studyline is a small study task manager, not a system for assessing a student's ability or monitoring their behaviour. Its purpose is to help me organise coursework for Information Technology Systems and other subjects. A task contains a title, course code, course name, due date, description and optional notes. The application does not ask for an email address, student identifier, real account password or personal profile. I limit the information requested to what is needed to organise a task. This is a practical data minimisation decision, rather than a claim that the prototype has been certified as legally compliant.</p>
+  <p>Users retain control over what they record. They can view all saved tasks, correct inaccurate details and delete tasks they no longer need. The deletion dialogue names the selected task and offers a clear Keep task action before anything is removed. This protects against accidental loss without preventing a deliberate deletion. Past due dates are allowed: an overdue assignment is still a real responsibility, and rejecting it would make the record less accurate.</p>
+</section>
+
+<section id="privacy-limits" class="article-section" aria-labelledby="privacy-heading">
+  <h2 id="privacy-heading">Where the information stays</h2>
+  <p>Task records are stored in this browser's <code>localStorage</code> for this site. The application has no task server, analytics service or cloud synchronisation. Its images and other assets are included locally, so using the application does not require third-party image or font requests. This reduces unnecessary sharing, but local storage is not encryption or a private user database. Someone with access to the same browser profile can inspect the records, and other JavaScript running on the same site can access them. OWASP specifically advises against storing sensitive information in local storage.<sup><a href="#ethics-source-2">1</a></sup></p>
+  <p>The login is deliberately described as a demonstration. The account details are visible in the front-end source, and the signed-in flag is held in <code>sessionStorage</code>. It restricts the normal task-page interface, including direct navigation to that page, but it does not provide secure authentication or separate users' data. Signing out hides the task interface; it does not erase saved tasks. On a shared device, users should remove their tasks and clear this site's browser data before leaving. Clearing browser data can also remove the only copy of their work.</p>
+</section>
+
+<section id="implementation" class="article-section" aria-labelledby="responsible-implementation-heading">
+  <h2 id="responsible-implementation-heading">Specific choices in the implementation</h2>
+  <p>Validation checks the required fields, rejects whitespace-only required values, limits input lengths and checks that a due date exists in the calendar. Error messages identify the relevant field so that users can correct it. The same checks apply when updating a task. These choices support accurate records and prevent a misleading success message when a required value is missing.</p>
+  <p>Task text is inserted into the page with <code>textContent</code>, rather than being interpreted as HTML. A note containing markup is therefore displayed as text. This reduces the risk of script injection through task fields; it does not remove the wider limitations of a browser-only application. Labels, keyboard access, visible focus and readable error messages also matter ethically: a useful organiser should be usable without relying on colour or a mouse alone.</p>
+  <p>OWASP explains that local storage should not be treated as a protection boundary for information requiring authentication.<sup><a href="#ethics-source-2">1</a></sup> For this prototype, the responsible decision is to explain its limits and avoid collecting sensitive information. A real multi-user service would need server-side authentication and authorisation, protected credential handling and a clear retention policy. I would not present this demonstration login as sufficient protection for that setting.</p>
+</section>
+
+<section class="article-section references" aria-labelledby="ethics-references-heading">
+  <h2 id="ethics-references-heading">References</h2>
+  <ol>
+    <li id="ethics-source-2">OWASP Cheat Sheet Series. <a href="https://cheatsheetseries.owasp.org/cheatsheets/HTML5_Security_Cheat_Sheet.html">HTML5 Security Cheat Sheet</a>, “Local Storage”.</li>
+  </ol>
+</section>
+
+    </div></div>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><p>Studyline · He Jiatao · INFO1012</p><p>Current local date &amp; time: <time data-clock>Loading local time…</time></p></div></footer>
+</body>
+</html>

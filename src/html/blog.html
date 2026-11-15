@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Studyline project plan, Agile approach and two documented validation defects with evidence and solutions.">
+  <title>Development journal — Studyline</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/common.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header"><div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="Studyline home">Studyline<span aria-hidden="true">.</span></a>
+    <nav class="site-nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="tasks.html">My tasks</a><a href="blog.html" aria-current="page">Development</a><a href="ethics.html">Ethics &amp; privacy</a></nav>
+  </div></header>
+  <main id="main-content" class="container">
+    <div class="page-heading"><div><h1>Development journal</h1><p>A practical plan, real defects, and the reasoning behind each fix.</p></div></div>
+    <div class="article-shell"><nav class="article-nav" aria-label="On this page"><a href="#agile">Agile approach</a><a href="#sprint">Three-week sprint</a><a href="#troubleshooting">Troubleshooting</a><a href="#issue-1">Course-code limit</a><a href="#issue-2">Invisible title</a></nav><div class="article-body">
+<section id="agile" class="article-section" aria-labelledby="agile-heading">
+  <h2 id="agile-heading">An Agile approach for a small individual project</h2>
+  <p>The Agile Manifesto values working software and responding to change, while still recognising the value of documentation and plans.<sup><a href="#plan-source-1">1</a></sup> Its principles also support frequent delivery, simplicity and regular reflection.<sup><a href="#plan-source-2">2</a></sup> For Studyline, I apply these ideas through a small prioritised backlog, working increments and explicit acceptance checks. I do not describe the project as a full Scrum process: this is an individual assignment, without a separate product owner or development team.</p>
+  <p>The first priority is the required four-page structure and navigation. The next is the complete task workflow: sign in, create, view, update, confirm deletion and sign out. Documentation, a project plan, troubleshooting evidence and the ethics reflection are part of the deliverable, not optional work left until after the website. Additional features are deferred unless they are needed to meet an acceptance criterion.</p>
+  <p>After each increment, I would check the working page against the assignment rather than only checking whether code has been written. A short daily review would ask: what works, what failed, and what is the next smallest useful change? A final retrospective would compare the plan with the actual work and record improvements. This keeps the method practical for one developer.</p>
+</section>
+
+<section id="sprint" class="article-section" aria-labelledby="sprint-heading">
+  <h2 id="sprint-heading">Proposed three-week sprint</h2>
+  <p class="plan-note"><strong>Plan and actual work are different records.</strong> The table is a proposed three-week sprint with weekly review points. It is not a claim that three weeks of development or commits have already occurred. The implementation and evidence for this submission are recorded with their actual dates, starting on 15 November 2026.</p>
+  <div class="table-scroll" tabindex="0" role="region" aria-label="Three-week sprint plan">
+    <table class="plan-table">
+      <caption>Three-week sprint: required work, deliverables and acceptance checks</caption>
+      <thead>
+        <tr><th scope="col">Week</th><th scope="col">Phase</th><th scope="col">Planned work</th><th scope="col">Deliverable and acceptance check</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Week 1</th>
+          <td>Planning</td>
+          <td>Extract the assessment requirements; make a prioritised backlog; define the four pages and identify submission requirements.</td>
+          <td>A requirement checklist and repository structure. Every required feature has a place in the plan; HTML, CSS and JavaScript have separate folders.</td>
+        </tr>
+        <tr>
+          <th scope="row">Week 1</th>
+          <td>Analysis</td>
+          <td>Describe the task data, create/edit/delete flows, validation rules, login scope and local storage limitations.</td>
+          <td>A task model and acceptance criteria. The model includes all six required task fields; invalid dates and empty required values have defined responses.</td>
+        </tr>
+        <tr>
+          <th scope="row">Week 1</th>
+          <td>Design</td>
+          <td>Plan consistent navigation, a labelled task form, a readable task list, image controls and mobile layouts.</td>
+          <td>A navigable four-page skeleton. The home page identifies the application; every page can reach the other required pages.</td>
+        </tr>
+        <tr>
+          <th scope="row">Week 2</th>
+          <td>Implementation</td>
+          <td>Build the image cycle, demonstration login, task creation, list, editing, deletion confirmation, persistence and live footer clock. Review each completed flow.</td>
+          <td>A working increment. A task can be created, edited and deleted by its unique ID; cancelling deletion preserves it; saved records survive a refresh.</td>
+        </tr>
+        <tr>
+          <th scope="row">Week 3</th>
+          <td>Testing and Maintenance</td>
+          <td>Test valid and invalid inputs, direct page access, keyboard use, small screens and storage. Record real defects and fixes; review the reflection and README; prepare the repository ZIP.</td>
+          <td>A tested release with screenshots and troubleshooting evidence. Required links and assets work; the README explains setup and use, credits and licensing, and contains the repository URL.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p>The review points close the loop: Week 1 checks the structure against the brief, Week 2 tests a complete task workflow, and Week 3 checks the release and submission package. A failed check returns to the backlog as a specific correction. Testing also takes place during implementation so that a defect is not carried into the final week unnoticed.</p>
+</section>
+
+<section class="article-section references" aria-labelledby="plan-references-heading">
+  <h2 id="plan-references-heading">Agile references</h2>
+  <ol>
+    <li id="plan-source-1">Beck, K. et al. (2001). <a href="https://agilemanifesto.org/">Manifesto for Agile Software Development</a>.</li>
+    <li id="plan-source-2">Beck, K. et al. (2001). <a href="https://agilemanifesto.org/principles.html">Principles behind the Agile Manifesto</a>.</li>
+  </ol>
+</section>
+<section id="troubleshooting" class="article-section" aria-labelledby="troubleshooting-heading">
+  <h2 id="troubleshooting-heading">Troubleshooting: two validation defects</h2>
+  <p>These issues were found while checking the first implementation on 15 November 2026. All recorded discovery and resolution times use Asia/Shanghai (UTC+08:00). The initial source was preserved before correction. The before screenshots below are later <strong>reproductions of that preserved initial version</strong>, not screenshots claimed to have been captured at the original discovery time. The after screenshots show the corrected application.</p>
+  <p>The regression run at <time datetime="2026-11-15T14:33:17+08:00">14:33:17</time> had five passing tests and two failing tests. After the corrections, the run at <time datetime="2026-11-15T14:38:36+08:00">14:38:36</time> passed all seven tests. The checks address the validation result as well as what appears in the browser.</p>
+</section>
+<section id="issue-1" class="article-section" aria-labelledby="issue-1-heading">
+  <h2 id="issue-1-heading">Course-code normalisation bypassed the length limit</h2>
+  <p><strong>Encountered:</strong> <time datetime="2026-11-15T14:31:56+08:00">15 November 2026, 14:31:56 (UTC+08:00)</time>.<br><strong>Resolved:</strong> <time datetime="2026-11-15T14:38:00+08:00">15 November 2026, 14:38:00 (UTC+08:00)</time>.</p>
+  <p><strong>Reproduction:</strong> enter 20 copies of <code>ß</code> (U+00DF) as the course code, and valid values in the other required fields. The initial version accepted the input, then saved 40 <code>S</code> characters. The expected result was rejection because the normalised code exceeded the 20-character limit.</p>
+  <div class="evidence-grid">
+    <figure><a href="../../assets/screenshots/issue-1-before.jpg"><img src="../../assets/screenshots/issue-1-before.jpg" width="1265" height="1427" alt="Preserved initial version reproduction showing a course code expanded to 40 S characters" loading="lazy"></a><figcaption>Before: reproduction of the preserved initial version. The saved course code exceeded its limit.</figcaption></figure>
+    <figure><a href="../../assets/screenshots/issue-1-after.jpg"><img src="../../assets/screenshots/issue-1-after.jpg" width="1265" height="1398" alt="Corrected application rejecting a normalised course code longer than 20 characters" loading="lazy"></a><figcaption>After: the corrected application rejects the value and displays a field-specific message.</figcaption></figure>
+  </div>
+  <h3>Code that caused the issue</h3>
+  <pre><code class="language-javascript">for (const [field, limit] of Object.entries(LIMITS)) {
+  data[field] = typeof raw[field] === "string" ? raw[field].trim() : "";
+  if (field !== "notes" &amp;&amp; !data[field]) {
+    errors[field] = "This field is required. Enter a value.";
+  } else if (data[field].length &gt; limit) {
+    errors[field] = `Use ${limit} characters or fewer.`;
+  }
+}
+data.courseCode = data.courseCode.toUpperCase();</code></pre>
+  <h3>Cause and correction</h3>
+  <p>The length check examined the trimmed input before normalisation. JavaScript's uppercase conversion can change the length of a Unicode string: one <code>ß</code> becomes two letters, <code>SS</code>. The final code could therefore be longer than the value that had passed validation. I moved course-code conversion into the validation loop, before checking the length. This makes the rule apply to the value that will actually be stored.</p>
+  <pre><code class="language-javascript">data[field] = typeof raw[field] === "string" ? raw[field].trim() : "";
+if (field === "courseCode") data[field] = data[field].toUpperCase();
+const hasVisibleText = /[^\s\p{Cf}]/u.test(data[field]);
+if (field !== "notes" &amp;&amp; !hasVisibleText) {
+  errors[field] = "This field is required. Enter visible text.";
+} else if (data[field].length &gt; limit) {
+  errors[field] = `Use ${limit} characters or fewer.`;
+}</code></pre>
+  <p><strong>Verification:</strong> the regression test named <code>course-code length is checked after case normalisation</code> now passes. The browser also rejects the 20-character source input after its uppercase expansion, while an ordinary value such as <code>info1012</code> is saved as <code>INFO1012</code>.</p>
+  <p><strong>References:</strong> JavaScript <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase">String.prototype.toUpperCase()</a>; the project's <code>validateTask</code> function and <code>tests/task-logic.test.cjs</code>. The uppercase behaviour was verified directly with the failing and passing regression runs.</p>
+</section>
+<section id="issue-2" class="article-section" aria-labelledby="issue-2-heading">
+  <h2 id="issue-2-heading">An invisible-only title passed the required-field check</h2>
+  <p><strong>Encountered:</strong> <time datetime="2026-11-15T14:32:33+08:00">15 November 2026, 14:32:33 (UTC+08:00)</time>.<br><strong>Resolved:</strong> <time datetime="2026-11-15T14:38:00+08:00">15 November 2026, 14:38:00 (UTC+08:00)</time>.</p>
+  <p><strong>Reproduction:</strong> use only a zero-width space, <code>U+200B</code>, as the task title and complete the other fields normally. The initial version created a task whose title looked empty. The expected result was a required-field error, because a usable task needs a visible title.</p>
+  <div class="evidence-grid">
+    <figure><a href="../../assets/screenshots/issue-2-before.jpg"><img src="../../assets/screenshots/issue-2-before.jpg" width="1265" height="1427" alt="Preserved initial version reproduction showing a saved task with an apparently blank title" loading="lazy"></a><figcaption>Before: reproduction of the preserved initial version. An invisible-only title was accepted.</figcaption></figure>
+    <figure><a href="../../assets/screenshots/issue-2-after.jpg"><img src="../../assets/screenshots/issue-2-after.jpg" width="1265" height="1425" alt="Corrected application displaying a visible-text required error for an invisible-only title" loading="lazy"></a><figcaption>After: the corrected application keeps the task unsaved and identifies the title error.</figcaption></figure>
+  </div>
+  <h3>Code that caused the issue</h3>
+  <pre><code class="language-javascript">data[field] = typeof raw[field] === "string" ? raw[field].trim() : "";
+if (field !== "notes" &amp;&amp; !data[field]) {
+  errors[field] = "This field is required. Enter a value.";
+}</code></pre>
+  <h3>Cause and correction</h3>
+  <p>The check assumed that <code>trim()</code> removed every character that might look empty. It removes whitespace defined by JavaScript, but it does not remove U+200B. The remaining string had length one and passed the truthiness check. I changed the required-field rule to require at least one character that is neither whitespace nor a Unicode format character. This rejects a format-only title without removing joiners from otherwise visible text, such as a joined emoji.</p>
+  <pre><code class="language-javascript">const hasVisibleText = /[^\s\p{Cf}]/u.test(data[field]);
+if (field !== "notes" &amp;&amp; !hasVisibleText) {
+  errors[field] = "This field is required. Enter visible text.";
+}</code></pre>
+  <p><strong>Verification:</strong> the regression test named <code>required text cannot consist only of invisible formatting characters</code> now passes. The browser displays the title error and leaves the task list unchanged. Ordinary titles and visible text containing joiners remain accepted; notes remain optional.</p>
+  <p><strong>References:</strong> JavaScript <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trim">String.prototype.trim()</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape">Unicode character class escapes</a>; the project's validation regression test. The edge cases were checked directly rather than assuming that a non-empty string was sufficient.</p>
+</section>
+    </div></div>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><p>Studyline · He Jiatao · INFO1012</p><p>Current local date &amp; time: <time data-clock>Loading local time…</time></p></div></footer>
+</body>
+</html>
